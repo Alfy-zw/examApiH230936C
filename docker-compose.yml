@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./src:/app  # Mount the local src directory to the /app directory in the container
+    ports:
+      - "3000:3000"
+    command: python main.py
